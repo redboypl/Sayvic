@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Menú de Mini Postres</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    .item { margin: 30px; }
+    .foto { width: 250px; border-radius: 10px; }
+    model-viewer { width: 300px; height: 300px; }
+  </style>
+</head>
+<body>
+  <h1>🍮 Menú de Mini Postres 🍮</h1>
+
+  <div class="item">
+    <h2>Mini Cheesecake</h2>
+    <img class="foto" src="cheesecake.jpg" alt="Cheesecake">
+    <model-viewer src="Models/Cupcake.glb" alt="Mini Cheesecake 3D" camera-controls></model-viewer>
+  </div>
+
+  <div class="item">
+    <h2>Mini Brownie</h2>
+    <img class="foto" src="brownie.jpg" alt="Brownie">
+    <model-viewer src="brownie.glb" alt="Mini Brownie 3D" auto-rotate camera-controls></model-viewer>
+  </div>
+</body>
+</html>
