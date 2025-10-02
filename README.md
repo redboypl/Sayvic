@@ -1,2 +1,0 @@
-# Sayvic
-Pagina Sayvic
