@@ -11,9 +11,10 @@
 </head>
 <body>
 
+  <a class="admin-link" href="admin.html" title="Panel admin">⚙️</a>
+
   <div class="page">
 
-    <!-- HERO -->
     <section class="hero">
       <div class="blob-bg"></div>
       <div class="avatar-wrap">
@@ -31,23 +32,14 @@
       </a>
     </section>
 
-    <!-- GALERÍA -->
     <h2 class="section-title">Mis creaciones</h2>
     <div class="divider"></div>
-
-    <div class="gallery">
-      <div class="gallery-card g1"><div class="thumb">🎂</div><div class="overlay"></div></div>
-      <div class="gallery-card g2"><div class="thumb">🍮</div><div class="overlay"></div></div>
-      <div class="gallery-card g3"><div class="thumb">🧁</div><div class="overlay"></div></div>
-      <div class="gallery-card g4"><div class="thumb">🍰</div><div class="overlay"></div></div>
-      <div class="gallery-card g5"><div class="thumb">🍩</div><div class="overlay"></div></div>
-      <div class="gallery-card g6"><div class="thumb">🍫</div><div class="overlay"></div></div>
+    <div class="gallery" id="gallery">
+      <div class="gallery-empty" id="gallery-empty"><p>✨ Las fotos aparecerán aquí</p></div>
     </div>
 
-    <!-- ESPECIALIDADES -->
     <h2 class="section-title">Especialidades</h2>
     <div class="divider"></div>
-
     <div class="specialty-grid">
       <div class="spec-card">
         <div class="icon">🎂</div>
@@ -66,10 +58,8 @@
       </div>
     </div>
 
-    <!-- CONTACTO -->
     <h2 class="section-title">¿Hablamos?</h2>
     <div class="divider"></div>
-
     <div class="contact-section">
       <p>¿Quieres encargar algo especial para tu evento? Escríbeme y lo hacemos realidad.</p>
       <div class="contact-links">
@@ -84,7 +74,15 @@
     </div>
 
     <footer class="footer">s.sdesserts · hecho con 🤍</footer>
+  </div>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-nav prev" id="lightbox-prev">‹</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+    <button class="lightbox-nav next" id="lightbox-next">›</button>
   </div>
 
   <script src="main.js"></script>
