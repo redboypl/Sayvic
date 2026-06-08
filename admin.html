@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin – s.sdesserts</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="admin-body">
+
+  <!-- LOGIN -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-card">
+      <div class="login-avatar">🍰</div>
+      <h2 class="login-title">Panel de administración</h2>
+      <p class="login-sub">s.sdesserts</p>
+      <div class="login-field">
+        <label>Usuario</label>
+        <input type="text" id="login-user" placeholder="usuario" autocomplete="username" />
+      </div>
+      <div class="login-field">
+        <label>Contraseña</label>
+        <input type="password" id="login-pass" placeholder="••••••" autocomplete="current-password" />
+      </div>
+      <p class="login-error" id="login-error"></p>
+      <button class="btn-primary" id="login-btn">Entrar</button>
+      <p class="login-hint">Credenciales por defecto: <strong>admin</strong> / <strong>dulce123</strong></p>
+    </div>
+  </div>
+
+  <!-- PANEL ADMIN -->
+  <div class="admin-panel" id="admin-panel" style="display:none;">
+
+    <header class="admin-header">
+      <div class="admin-header-left">
+        <span class="admin-logo">🍰</span>
+        <span class="admin-title">Panel Admin</span>
+      </div>
+      <div class="admin-header-right">
+        <a href="index.html" class="btn-secondary">Ver web</a>
+        <button class="btn-secondary" id="logout-btn">Salir</button>
+      </div>
+    </header>
+
+    <div class="admin-content">
+
+      <!-- SUBIR FOTO -->
+      <section class="admin-section">
+        <h2 class="admin-section-title">Subir nueva foto</h2>
+
+        <div class="upload-zone" id="upload-zone">
+          <input type="file" id="file-input" accept="image/*" multiple hidden />
+          <div class="upload-icon">📸</div>
+          <p class="upload-text">Arrastra fotos aquí o <span class="upload-link" id="upload-trigger">haz clic para seleccionar</span></p>
+          <p class="upload-hint">JPG, PNG, WEBP · Máx. 5 MB por foto</p>
+        </div>
+
+        <!-- PREVIEW antes de guardar -->
+        <div class="preview-area" id="preview-area" style="display:none;">
+          <div class="preview-grid" id="preview-grid"></div>
+          <div class="preview-actions">
+            <button class="btn-secondary" id="cancel-upload">Cancelar</button>
+            <button class="btn-primary" id="confirm-upload">Guardar fotos</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERÍA GUARDADA -->
+      <section class="admin-section">
+        <div class="admin-section-header">
+          <h2 class="admin-section-title">Fotos guardadas</h2>
+          <span class="photo-count" id="photo-count">0 fotos</span>
+        </div>
+        <div class="admin-gallery" id="admin-gallery">
+          <p class="no-photos" id="no-photos">Aún no has subido fotos.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMAR BORRAR -->
+  <div class="modal-overlay" id="delete-modal" style="display:none;">
+    <div class="modal-card">
+      <p class="modal-text">¿Eliminar esta foto?</p>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="cancel-delete">Cancelar</button>
+        <button class="btn-danger" id="confirm-delete">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
